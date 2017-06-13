@@ -30,3 +30,7 @@
 - 系统权限
 
 [登陆页效果](https://dk-lan.github.io/vuex-erp/dist/index.html#/login)
+
+#目录结构
+- dist
+  + demo

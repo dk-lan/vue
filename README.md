@@ -62,11 +62,7 @@
 在代码层面，Vue 只是一个构造函数，整个 Vue 的实现都在实例化这个构造函数开始。
 ``` javascript
   var vm = new Vue({
-    data: {
-      //数据
-      name: 'DK',
-      age: 18
-    }
+    //选项
   })
 ```
 
@@ -75,45 +71,45 @@
 
 ## 插值
 ``` html
-	<div id="app">
-		<!-- 文本 -->
-		<fieldset>
-			<legend>文本</legend>
-			<div>{{message}}</div>
-		</fieldset>
+<div id="app">
+<!-- 文本 -->
+<fieldset>
+<legend>文本</legend>
+<div>{{message}}</div>
+</fieldset>
 
-		<!-- 纯 HTML -->
-		<fieldset>
-			<legend>纯 HTML</legend>
-			<div v-html="rawHtml"></div>
-		</fieldset>		
+<!-- 纯 HTML -->
+<fieldset>
+<legend>纯 HTML</legend>
+<div v-html="rawHtml"></div>
+</fieldset>		
 
-		<!-- 属性 -->
-		<fieldset>
-			<legend>属性</legend>
-			<img :src="src" alt="">
-      <img v-bind:src="'../imgs/red.jpg'" alt="">
-		</fieldset>	
+<!-- 属性 -->
+<fieldset>
+<legend>属性</legend>
+<img :src="src" alt="" />
+<img v-bind:src="'../imgs/red.jpg'" alt="" />
+</fieldset>	
 
-		<!-- js 表达式 -->
-		<fieldset>
-			<legend>js 表达式</legend>
-			<div>{{1 + 1}}</div>
-			<div>{{status ? 'YES' : 'NO'}}</div>
-			<div>{{message.split('').reverse().join('')}}</div>
-		</fieldset>	
-	</div>
+<!-- js 表达式 -->
+<fieldset>
+<legend>js 表达式</legend>
+<div>{{1 + 1}}</div>
+<div>{{status ? 'YES' : 'NO'}}</div>
+<div>{{message.split('').reverse().join('')}}</div>
+</fieldset>	
+</div>
 ```
 
 ``` javascript
-		var vm = new Vue({
-			el: '#app',
-			data: {
-				message: '我是文本',
-				rawHtml: '<h1>我是 h1 标签</h1>',
-				src: '../imgs/green.jpg',
-				status: true,
-			}
-		})
+var vm = new Vue({
+el: '#app',
+data: {
+message: '我是文本',
+rawHtml: '<h1>我是 h1 标签</h1>',
+src: '../imgs/green.jpg',
+status: true,
+}
+})
 ```
-[插值效果](https://dk-lan.github.io/vue-erp/dist/index.html#/login)
+[插值效果](https://dk-lan.github.io/vue-erp/dist/demo/%E6%A8%A1%E7%89%88%E8%AF%AD%E6%B3%95/%E6%8F%92%E5%80%BC-%E6%96%87%E6%9C%AC.html)

@@ -53,15 +53,68 @@
 
 # 认识 Vue
 关于 Vue 的描述有不少，不外乎都会拿来与 Angular 和 React 对比，同样头顶 MVVM 双向数据驱动设计模式光环的 Angular 自然被对比的最多，但到目前为止，Angular 在热度上已明显不及 Vue，性能已成为最大的诟病。
+
 在我看来，Vue 和 Angular 的对比有种早些年 Java 和 ASP.NET 的对比，对于开发者而言，ASP.NET 官方本身已实现好了大量的框架和功能，使用起来非常的方便快捷，同时也提供了无限的可扩展性，对比起 Java 而言，后者在本身框架和功能上都不及 ASP.NET，但同样都拥有无限的可扩展性，相比之下，本来 ASP.NET 很有一统天下的可能，但现实终归现实，ASP.NET 本身的框架和功能实现并没有换来多少称赞，反在性能和安全性方面被诟病。回看 Vue 和 Angular 的阵营，我也总有这么一种感觉。
+
 所以，在这个开源的年代，我认为一个框架功能不需要有多么强大，再强大再完善的功能都抵不上“适合”两字，反而轻量级且有无限可扩展性会成为所有开发者的追求。
+
 关于 Vue、React 和 Angular，其实都是在原生 JS 基础上，对面向对象不一样的实现方式而已，所以要想使用这三者中的任意一种，首先要有一定的 JS 基础和对面向对象有一定的认识。
 在代码层面，Vue 只是一个构造函数，整个 Vue 的实现都在实例化这个构造函数开始。
 ``` javascript
   var vm = new Vue({
-    
+    data: {
+      //数据
+      name: 'DK',
+      age: 18
+    }
   })
 ```
 
 # 模版语法
-模版语法
+模版语法已成为前端在数据驱动模式上 V 层最好的实现。
+
+## 插值
+``` html
+
+	<div id="app">
+		<!-- 文本 -->
+		<fieldset>
+			<legend>文本</legend>
+			<div>{{message}}</div>
+		</fieldset>
+
+		<!-- 纯 HTML -->
+		<fieldset>
+			<legend>纯 HTML</legend>
+			<div v-html="rawHtml"></div>
+		</fieldset>		
+
+		<!-- 属性 -->
+		<fieldset>
+			<legend>属性</legend>
+			<img :src="src" alt="">
+            <img v-bind:src="'../imgs/red.jpg'" alt="">
+		</fieldset>	
+
+		<!-- js 表达式 -->
+		<fieldset>
+			<legend>js 表达式</legend>
+			<div>{{1 + 1}}</div>
+			<div>{{status ? 'YES' : 'NO'}}</div>
+			<div>{{message.split('').reverse().join('')}}</div>
+		</fieldset>	
+	</div>
+
+```
+
+``` javascript
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				message: '我是文本',
+				rawHtml: '<h1>我是 h1 标签</h1>',
+				src: '../imgs/green.jpg',
+				status: true,
+			}
+		})
+```

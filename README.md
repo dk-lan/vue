@@ -113,3 +113,19 @@ var vm = new Vue({
 })
 ```
 [插值效果](https://dk-lan.github.io/vue-erp/dist/demo/%E6%A8%A1%E7%89%88%E8%AF%AD%E6%B3%95/%E6%8F%92%E5%80%BC-%E6%96%87%E6%9C%AC.html)
+
+## 缩写
+### v-bind 缩写
+``` html
+  <!--完整写法-->
+  <img v-bind:src="'../imgs/red.jpg'" alt="" />
+  <!--缩写-->
+  <img :src="src" alt="" />
+```
+### v-on 缩写
+``` html
+  <!--完整语法-->
+  <button v-on:click="greet">Greet</button>
+  <!--缩写语法-->
+  <button @click="greet">Greet</button>  
+```

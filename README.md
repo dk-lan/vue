@@ -75,7 +75,6 @@
 
 ## 插值
 ``` html
-
 	<div id="app">
 		<!-- 文本 -->
 		<fieldset>
@@ -104,7 +103,6 @@
 			<div>{{message.split('').reverse().join('')}}</div>
 		</fieldset>	
 	</div>
-
 ```
 
 ``` javascript

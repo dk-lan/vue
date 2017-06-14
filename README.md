@@ -29,7 +29,7 @@
 - 系统支持多语言切换
 - 系统权限
 
-[登陆页效果](https://dk-lan.github.io/vuex-erp/dist/index.html#/login)
+[登陆页效果](https://dk-lan.github.io/vue-erp/dist/index.html#/login)
 
 # 项目文件结构
 - dist [构建目录]
@@ -92,7 +92,7 @@
 		<fieldset>
 			<legend>属性</legend>
 			<img :src="src" alt="">
-            <img v-bind:src="'../imgs/red.jpg'" alt="">
+      <img v-bind:src="'../imgs/red.jpg'" alt="">
 		</fieldset>	
 
 		<!-- js 表达式 -->
@@ -116,3 +116,4 @@
 			}
 		})
 ```
+[插值效果](https://dk-lan.github.io/vue-erp/dist/index.html#/login)

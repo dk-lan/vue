@@ -173,35 +173,95 @@ var vm = new Vue({
 ```
 
 ## 指令
-指令（Directive），换句话说就是元素的自定义属性，在 Vue 中是以 v- 为前缀的自定义属性
+指令（Directive），换句话说就是元素的自定义属性，在 Vue 中是以 v- 为前缀的自定义属性，属性值为对象或 js 表达式
 
 <table>
   <thead>
     <tr>
-      <th>指令</th>
-      <th>类型</th>
-      <th>用法</th>
+      <th>指令</th><th>类型</th><th>用法</th><th>说明</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>v-text</td>
-      <td>string</td>
-      <td>
+    <tr><td>v-text</td><td>string</td><td><!--v-text-->
       
-        ``` html
-          <span v-text="msg"></span>
-        ```
-        效果等同于
-        ``` html
-          <span>{{msg}}</span>
-        ```   
+  ``` html
+    <span v-text="msg"></span>
+    <!--效果等同于-->
+    <span>{{msg}}</span>
+  ```
+  
+   </td><td>v-text 的权重高于 {{}}</td></tr>
+    <tr><td>v-html</td><td>string</td><td><!--v-html-->
+      
+  ``` html
+    <div v-html="html"></div>
+  ```
+  
+   </td><td>内容按普通 HTML 插入，不会作为 Vue 模板进行编译</td></tr> 
+    <tr><td>v-show</td><td>boolean</td><td><!--v-show-->
+      
+  ``` html
+    <div v-show="show"></div>
+  ```
+  
+   </td><td>show 的值会直接影响 div 在文档中<b>是否显示</b></td></tr>    
+    <tr><td>v-if</td><td>boolean</td><td><!--v-if-->
+      
+  ``` html
+    <div v-if="status"></div>
+  ```
+  
+   </td><td>status 的值会直接影响 div 在文档中<b>是否存在</b></td></tr>
+    <tr><td>v-else-if</td><td>boolean</td><td><!--v-else-if-->
+      
+  ``` html
+    <div v-if="flag == 1">1</div>
+    <div v-else-if="flag == 2">2</div>
+  ```
+  
+   </td><td>必须跟 v-if 或者 v-else-if 元素后面，</td></tr>      
+    <tr><td>v-else</td><td>不属性表达式</td><td><!--v-else-->
+      
+  ``` html
+    <div v-if="flag == 1">1</div>
+    <div v-else-if="flag == 2">2</div>
+    <div v-else>2</div>
+  ```
+  
+   </td><td>v-else 不需要表达式（属性值），必须跟 v-if 或者 v-else-if 元素后面，</td></tr>    
+    <tr><td>v-for</td><td>Array | Object | Number | String</td><td><!--v-for-->
+      
+  ``` html
+    <!--data = 3 结果会生成 [data] 个 div，value 的值分类为 1, 2, 3 index(下标) 的值分别为 0, 1, 2-->
+    <div v-for="(value, index) in data"><span v-text="value"></span><span>{{index}}</span></div>
+    <!--也可以这样写-->
+    <div v-for="value in data"><span v-text="value"></span></div>
 
-      </td>      
-    </tr>
+    <!--data = "abc" 结果会生成 data.length 个 div，value 的值分类为 a, b, c index(下标) 的值分别为 0, 1, 2-->
+    <div v-for="(value, index) in data"><span v-text="value"></span><span>{{index}}</span></div>   
+    <!--也可以这样写-->
+    <div v-for="value in data"><span v-text="value"></span></div>
+
+    <!--data = {name: 'dk', age: 18} 结果会生成 data 属性个数 个 div，value 的值分类为 dk, 18 key 的值分别为 name, age-->
+    <div v-for="(value, key) in data"><span v-text="key"></span><span>{{value}}</span></div>
+    <!--也可以这样写-->
+    <div v-for="value in data"><span v-text="value"></span></div>
+
+    <!--data = [{name: 'dk1', age: 18}, {name: 'dk2', age: 20}] 结果会生成 data.length 个 div，obj 的值分类为 data[0], data[1] index 的值分别为0, 1-->
+    <div v-for="(obj, index) in data"><span v-text="key"></span><span>{{value}}</span></div>    
+    <!--也可以这样写-->
+    <div v-for="obj in data"><span v-text="value"></span></div>    
+  ```
+  
+   </td><td>v-for 等同于循环生成元素，(arg1, arg2) in data，arg1 指 data 的值，arg2 指的是下标（在 data 为对象时则为 key），如果单写 arg1 in data，则 arg1 一般指前者</td></tr> 
+    <tr><td>v-on</td><td>不属性表达式</td><td><!--v-on-->
+      
+  ``` html
+    <div v-if="flag == 1">1</div>
+    <div v-else-if="flag == 2">2</div>
+    <div v-else>2</div>
+  ```
+  
+   </td><td>v-else 不需要表达式（属性值），必须跟 v-if 或者 v-else-if 元素后面，</td></tr>        
   </tbody>
 </table>
-
-| 指令 | 类型 | 用法 | 效果 |
-|------|-----|------|------|
-| v-text | string | `<span v-text="msg"></span>`<br/>效果等同于<br/>`<span>{{msg}}</span>`

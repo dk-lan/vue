@@ -193,10 +193,10 @@ var vm = new Vue({
           <span v-text="msg"></span>
         ```
         效果等同于
-      
         ``` html
           <span>{{msg}}</span>
-        ```      
+        ```   
+
       </td>      
     </tr>
   </tbody>
@@ -204,4 +204,4 @@ var vm = new Vue({
 
 | 指令 | 类型 | 用法 | 效果 |
 |------|-----|------|------|
-| v-text | string | ` html <span v-text="msg"></span>`效果等同于`<span>{{msg}}</span>`
+| v-text | string | `<span v-text="msg"></span>`<br/>效果等同于<br/>`<span>{{msg}}</span>`

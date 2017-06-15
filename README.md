@@ -175,6 +175,33 @@ var vm = new Vue({
 ## 指令
 指令（Directive），换句话说就是元素的自定义属性，在 Vue 中是以 v- 为前缀的自定义属性
 
+<table>
+  <thead>
+    <tr>
+      <th>指令</th>
+      <th>类型</th>
+      <th>用法</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v-text</td>
+      <td>string</td>
+      <td>
+      
+        ``` html
+          <span v-text="msg"></span>
+        ```
+        效果等同于
+      
+        ``` html
+          <span>{{msg}}</span>
+        ```      
+      </td>      
+    </tr>
+  </tbody>
+</table>
+
 | 指令 | 类型 | 用法 | 效果 |
 |------|-----|------|------|
-| v-text | string | `<span v-text="msg"></span>`效果等同于`<span>{{msg}}</span>`
+| v-text | string | ` html <span v-text="msg"></span>`效果等同于`<span>{{msg}}</span>`

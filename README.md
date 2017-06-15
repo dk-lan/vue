@@ -174,6 +174,7 @@ var vm = new Vue({
 
 ## 指令
 指令（Directive），换句话说就是元素的自定义属性，在 Vue 中是以 v- 为前缀的自定义属性
+
 | 指令 | 类型 | 用法 | 效果 |
 |------|-----|------|------|
 | v-text | string | `<span v-text="msg"></span>`效果等同于`<span>{{msg}}</span>`

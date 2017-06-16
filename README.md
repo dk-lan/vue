@@ -232,36 +232,78 @@ var vm = new Vue({
     <tr><td>v-for</td><td>Array | Object | Number | String</td><td><!--v-for-->
       
   ``` html
-    <!--data = 3 结果会生成 [data] 个 div，value 的值分类为 1, 2, 3 index(下标) 的值分别为 0, 1, 2-->
-    <div v-for="(value, index) in data"><span v-text="value"></span><span>{{index}}</span></div>
+    <!--
+      data = 3 
+      结果会生成 3 个 div，
+      value 的值分类为 1, 2, 3 
+      index 的值分别为 0, 1, 2
+    -->
+    <div v-for="(value, index) in data">
+      <span v-text="value"></span>
+      <span>{{index}}</span>
+    </div>
     <!--也可以这样写-->
-    <div v-for="value in data"><span v-text="value"></span></div>
+    <div v-for="value in data">
+      <span v-text="value"></span>
+    </div>
 
-    <!--data = "abc" 结果会生成 data.length 个 div，value 的值分类为 a, b, c index(下标) 的值分别为 0, 1, 2-->
-    <div v-for="(value, index) in data"><span v-text="value"></span><span>{{index}}</span></div>   
+    <!--
+      data = "abc" 
+      结果会生成 data.length 个 div，
+      value 的值分类为 a, b, c 
+      index 的值分别为 0, 1, 2
+    -->
+    <div v-for="(value, index) in data">
+      <span v-text="value"></span>
+      <span>{{index}}</span>
+    </div>   
     <!--也可以这样写-->
-    <div v-for="value in data"><span v-text="value"></span></div>
+    <div v-for="value in data">
+      <span v-text="value"></span>
+    </div>
 
-    <!--data = {name: 'dk', age: 18} 结果会生成 data 属性个数 个 div，value 的值分类为 dk, 18 key 的值分别为 name, age-->
-    <div v-for="(value, key) in data"><span v-text="key"></span><span>{{value}}</span></div>
+    <!--
+      data = {name: 'dk', age: 18} 
+      结果会生成 data 属性个数 个 div，
+      value 的值分类为 dk, 18 
+      key 的值分别为 name, age
+    -->
+    <div v-for="(value, key) in data">
+      <span v-text="key"></span>
+      <span>{{value}}</span>
+    </div>
     <!--也可以这样写-->
-    <div v-for="value in data"><span v-text="value"></span></div>
+    <div v-for="value in data">
+      <span v-text="value"></span>
+    </div>
 
-    <!--data = [{name: 'dk1', age: 18}, {name: 'dk2', age: 20}] 结果会生成 data.length 个 div，obj 的值分类为 data[0], data[1] index 的值分别为0, 1-->
-    <div v-for="(obj, index) in data"><span v-text="key"></span><span>{{value}}</span></div>    
+    <!--
+      data = [{name: 'dk1', age: 18}, {name: 'dk2', age: 20}] 
+      结果会生成 data.length 个 div，
+      obj 的值分类为 data[0], data[1] 
+      index 的值分别为0, 1
+    -->
+    <div v-for="(obj, index) in data">
+      <span v-text="JSON.stringify(obj)"></span>
+      <span>{{index}}</span>
+    </div>    
     <!--也可以这样写-->
-    <div v-for="obj in data"><span v-text="value"></span></div>    
+    <div v-for="obj in data">
+      <span v-text="JSON.stringify(obj)"></span>
+    </div>    
   ```
   
    </td><td>v-for 等同于循环生成元素，(arg1, arg2) in data，arg1 指 data 的值，arg2 指的是下标（在 data 为对象时则为 key），如果单写 arg1 in data，则 arg1 一般指前者</td></tr> 
-    <tr><td>v-on</td><td>不属性表达式</td><td><!--v-on-->
+    <tr><td>v-on</td><td>Function</td><td><!--v-on-->
       
   ``` html
-    <div v-if="flag == 1">1</div>
-    <div v-else-if="flag == 2">2</div>
-    <div v-else>2</div>
+    <!--click事件直接绑定一个方法-->
+    <button v-on:click="say1">say1</button>
+    <!--缩写方式-->
+    <!--click事件使用内联语句-->
+    <button @click="say2('调用了 say2', $event)">say2</button>     
   ```
   
-   </td><td>v-else 不需要表达式（属性值），必须跟 v-if 或者 v-else-if 元素后面，</td></tr>        
+   </td><td></td></tr>        
   </tbody>
 </table>

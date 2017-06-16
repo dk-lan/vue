@@ -178,7 +178,7 @@ var vm = new Vue({
 <table>
   <thead>
     <tr>
-      <th>指令</th><th>类型</th><th>用法</th><th>说明</th>
+      <th>指令</th><th>类型</th><th>用法</th>
     </tr>
   </thead>
   <tbody>
@@ -187,48 +187,53 @@ var vm = new Vue({
   ``` html
     <span v-text="msg"></span>
     <!--效果等同于-->
+    <!--v-text 的权重高于 {{}}-->
     <span>{{msg}}</span>
   ```
   
-   </td><td>v-text 的权重高于 {{}}</td></tr>
+   </td></tr>
     <tr><td>v-html</td><td>string</td><td><!--v-html-->
       
   ``` html
     <div v-html="html"></div>
   ```
   
-   </td><td>内容按普通 HTML 插入，不会作为 Vue 模板进行编译</td></tr> 
+   </td></tr> 
     <tr><td>v-show</td><td>boolean</td><td><!--v-show-->
       
   ``` html
+    <!--show 的值会直接影响 div 在文档中是否显示-->
     <div v-show="show"></div>
   ```
   
-   </td><td>show 的值会直接影响 div 在文档中<b>是否显示</b></td></tr>    
+   </td></tr>    
     <tr><td>v-if</td><td>boolean</td><td><!--v-if-->
       
   ``` html
+    <!--status 的值会直接影响 div 在文档中是否存在-->
     <div v-if="status"></div>
   ```
   
-   </td><td>status 的值会直接影响 div 在文档中<b>是否存在</b></td></tr>
+   </td></tr>
     <tr><td>v-else-if</td><td>boolean</td><td><!--v-else-if-->
       
   ``` html
     <div v-if="flag == 1">1</div>
+    <!--必须跟 v-if 或者 v-else-if 元素后面-->
     <div v-else-if="flag == 2">2</div>
   ```
   
-   </td><td>必须跟 v-if 或者 v-else-if 元素后面，</td></tr>      
-    <tr><td>v-else</td><td>不属性表达式</td><td><!--v-else-->
+   </td></tr>      
+    <tr><td>v-else</td><td>不需要表达式</td><td><!--v-else-->
       
   ``` html
     <div v-if="flag == 1">1</div>
     <div v-else-if="flag == 2">2</div>
+    <!--必须跟 v-if 或者 v-else-if 元素后面-->
     <div v-else>2</div>
   ```
   
-   </td><td>v-else 不需要表达式（属性值），必须跟 v-if 或者 v-else-if 元素后面，</td></tr>    
+   </td></tr>    
     <tr><td>v-for</td><td>Array | Object | Number | String</td><td><!--v-for-->
       
   ``` html
@@ -293,7 +298,7 @@ var vm = new Vue({
     </div>    
   ```
   
-   </td><td>v-for 等同于循环生成元素，(arg1, arg2) in data，arg1 指 data 的值，arg2 指的是下标（在 data 为对象时则为 key），如果单写 arg1 in data，则 arg1 一般指前者</td></tr> 
+   </td></tr> 
     <tr><td>v-on</td><td>Function</td><td><!--v-on-->
       
   ``` html
@@ -304,6 +309,6 @@ var vm = new Vue({
     <button @click="say2('调用了 say2', $event)">say2</button>     
   ```
   
-   </td><td></td></tr>        
+   </td></tr>        
   </tbody>
 </table>

@@ -1,33 +1,9 @@
 # 教程简介
-本教程要实现一个简单的后台管理系统，包含登陆、数据列表、数据查询、列表分页、添加数据、修改数据和删除数据等功能，教程会从 Vue 入门开始讲解，包含 es6、Sass、Webpack、Bootstrap、jQuery 等技术，再到后台管理系统的一些常规功能，用 Vue 如何去实现。也许会有人质疑 Vue 和 jQuery 的搭配，在我本人看来，jQuery 本身已很成熟，而且包含了很多非常好用的插件，比如表单验证，会比 Vue 的成本低很多。在本教程中会用纯 Vue 和 Vue + jQuery 两种方式去实现某些功能，可用于对比两种方案在开发成本和性能上到底有多大的影响。
+本教程要实现一个简单的后台管理系统，包含登陆、数据列表、数据查询、列表分页、添加数据、修改数据和删除数据等功能，教程会从 Vue 入门开始讲解，包含 es6、Sass、Webpack、Bootstrap、jQuery 等技术，再到后台管理系统的一些常规功能，用 Vue 如何去实现。
 
-# 后台管理系统的常规技术点
-- 数据请求 ajax
-  - 所有 ajax 请求都会有 loding 和遮罩层
-  - 所有的 ajax 的 url 都应该设置相对应的前缀方便发布
-- 数据列表 datagrid
-  - 可配置是否需要分页
-  - 可配置是否需要搜索功能
-  - 可配置数据列表是否能修改、删除、添加和查看详情
-  - 可配置水平滚动的固定列
-  - 可配置点击列头是否需要排序
-  - 可配置列表是否允许直接修改数据
-  - 可配置列表是否允许复制行
-  - 列表的数据在编辑时可自动生成对应的表单元素，比如编辑日期时会自动生成日期控件
-  - 列表在编辑时的验证规则
-  - 是否需要支持树形结构
-- 表单 form
-  - 信息分组显示
-  - 表单编辑权限
-  - 表单验证
-  - 表单控件自动生成
-  - 每行显示的元素数量
-  - 跨列显示
-- 数据完整性
-- 数据安全性
-- 数据查询性能
-- 系统支持多语言切换
-- 系统权限
+也许会有人质疑 Vue 和 jQuery 的搭配，在我本人看来，jQuery 本身已很成熟，而且包含了很多非常好用的插件，比如表单验证，会比 Vue 的成本低很多。在本教程中会用纯 Vue 和 Vue + jQuery 两种方式去实现某些功能，可用于对比两种方案在开发成本和性能上到底有多大的影响。
+
+如果对 Vue 还不了解的建议先看看 Vue 基础教程，如果对 Vue 有一定了解的可以直接看 VueERP
 
 # 项目目录结构
 - VueBisc [Vue 基础教程]
@@ -38,6 +14,15 @@
 - 认识数据驱动模式
 - 认识 MVVM 模式
 - [模版语法](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax)
+- [样式绑定](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/StyleBinding)
+- [Vue 实例化时基本属性](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/VueBasicOptions)
+- [修饰符](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Modifiers)
+- 组件
+- 指令
+- 动画和过度效果
+- 路由
+- 钩子函数
+- Vuex
 
 # 认识 Vue
 关于 Vue 的描述有不少，不外乎都会拿来与 Angular 和 React 对比，同样头顶 MVVM 双向数据驱动设计模式光环的 Angular 自然被对比的最多，但到目前为止，Angular 在热度上已明显不及 Vue，性能已成为最大的诟病。
@@ -49,9 +34,19 @@
 关于 Vue、React 和 Angular，其实都是在原生 JS 基础上，对面向对象不一样的实现方式而已，所以要想使用这三者中的任意一种，首先要有一定的 JS 基础和对面向对象有一定的认识。
 
 在代码层面，Vue 只是一个构造函数，整个 Vue 的实现都在实例化这个构造函数开始。
+``` html
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+```
+``` html
+  <div id="app"></div>
+```
 ``` javascript
   var vm = new Vue({
-    //选项
+    el: '#app'// Vue 实例元素
+    data: {
+      //数据
+    }
+    ...
   })
 ```
 

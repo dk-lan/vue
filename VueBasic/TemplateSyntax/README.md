@@ -220,7 +220,7 @@ var vm = new Vue({
       <tr><td>v-pre</td><td>不需要表达式</td><td><!--v-pre-->
       
   ``` html
-    <!--{{}} 不编辑，当字符串输出-->
+    <!--{{}} 不编译，当字符串输出-->
     <span v-pre>{{mess}}</span>
   ```
   
@@ -250,6 +250,6 @@ var vm = new Vue({
   </tbody>
 </table>
 
-[指令效果](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Directives.html)
+[指令效果预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Directives.html)
 
-[综合安全](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Example.html)
+[综合安全预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Example.html)

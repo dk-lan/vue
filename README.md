@@ -37,7 +37,7 @@
 - 认识 Vue
 - 认识数据驱动模式
 - 认识 MVVM 模式
-- [模版语法](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/%E6%A8%A1%E7%89%88%E8%AF%AD%E6%B3%95)
+- [模版语法](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax)
 
 # 认识 Vue
 关于 Vue 的描述有不少，不外乎都会拿来与 Angular 和 React 对比，同样头顶 MVVM 双向数据驱动设计模式光环的 Angular 自然被对比的最多，但到目前为止，Angular 在热度上已明显不及 Vue，性能已成为最大的诟病。

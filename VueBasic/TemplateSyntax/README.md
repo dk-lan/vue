@@ -212,7 +212,7 @@ var vm = new Vue({
       <tr><td>v-model</td><td>表单元素的值</td><td><!--v-model-->
       
   ``` html
-    <!--仅限于表单元素-->
+    <!--仅限于表单元素，双向绑定-->
     <input type="text" v-model="mess"/>
   ```
   
@@ -251,3 +251,5 @@ var vm = new Vue({
 </table>
 
 [指令效果](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Directives.html)
+
+[综合安全](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Example.html)

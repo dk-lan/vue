@@ -309,6 +309,53 @@ var vm = new Vue({
     <button @click="say2('调用了 say2', $event)">say2</button>     
   ```
   
-   </td></tr>        
+   </td></tr> 
+       <tr><td>v-bind</td><td>Object</td><td><!--v-bind-->
+      
+  ``` html
+    <img v-bind:src="'imgs/red.jpg'" />
+    <!--缩写方式-->
+    <img :src="'imgs/yellow.jpg'" />
+  ```
+  
+   </td></tr>    
+      <tr><td>v-model</td><td>表单元素的值</td><td><!--v-model-->
+      
+  ``` html
+    <!--仅限于表单元素-->
+    <input type="text" v-model="mess"/>
+  ```
+  
+   </td></tr>  
+      <tr><td>v-pre</td><td>不需要表达式</td><td><!--v-pre-->
+      
+  ``` html
+    <!--{{}} 不编辑，当字符串输出-->
+    <span v-pre>{{mess}}</span>
+  ```
+  
+   </td></tr>  
+      <tr><td>v-cloak</td><td>不需要表达式</td><td><!--v-cloak-->
+      
+  ``` html
+    <!--
+      mess = 'abc'
+      span 还没被 vue 解析的时候会显示 {{mess}}
+      解析后会显示 123
+      用于解决这两个转换的过程不友好的显示
+      尤其是在页面加载过慢的情况很容易出现这种情况
+    -->
+    <span v-cloak>{{mess}}</span>
+  ```
+  
+   </td></tr>     
+      <tr><td>v-once</td><td>不需要表达式</td><td><!--v-once-->
+      
+  ``` html
+    <!--内容只解释一次，当改变 mess 时不会再次映射到 span-->
+    <span v-once>{{mess}}</span>
+  ```
+  
+   </td></tr>              
   </tbody>
 </table>

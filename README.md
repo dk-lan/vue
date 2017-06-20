@@ -21,7 +21,7 @@
 - [指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax#指令)
 - 自定义指令
 - 动画和过度效果
-- 路由
+- [路由](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Router)
 - Vuex
 
 # 认识 Vue

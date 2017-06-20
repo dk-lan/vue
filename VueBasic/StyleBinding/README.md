@@ -53,7 +53,7 @@ v-bind:class="[]"，数组元素可以为表达式，也可以为字符串，如
 ``` javascript
     data: {
         class1: 'className1',
-        class2: 'className1',
+        class2: 'className2',
         active: true
     }
 ```

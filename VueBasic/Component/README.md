@@ -54,6 +54,55 @@
         <h1>局部组件</h1>
     </div>
 ```
+## 组件是一个单独的作用域
+每个组件都有单独的作用域
+```html
+    <div id="app">
+        <p>{{count}}</p>
+        <component1/>
+    </div>    
+```
+```javascript
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            count: 10
+        },
+        methods: {
+            increment: function(){
+                this.count += 1;
+            }
+        },
+        components:{
+            'component1': {
+                template: '<button v-on:click="increment">{{ count }}</button>',
+                data: function(){
+                    //在组件里面 data 一定是 function 并返回一个对象
+                    return {
+                        count: 0
+                    }
+                },
+                methods: {
+                    increment: function(){
+                        this.count += 1;
+                    }
+                }
+            }
+        }
+    })
+```
+渲染结果为
+```html
+    <div id="app">
+        <p>10</p>
+        <!--
+            此按钮每次点击都会自增 1，而 p 标签永远都是为 10
+            原因为组件的作用域是单独的
+        -->
+        <button>0</button>
+    </div>    
+```
+[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Component/component.html)
 
 ## 特殊的 HTML 结构中使用 is
 比如在下拉列表（select）元素里面，子元素必须为 option，则在使用组件的时候用 is
@@ -152,7 +201,8 @@
 ```
 
 ## slot 分发内容
-Vue 组件默认是覆盖渲染
+Vue 组件默认是覆盖渲染，为了解决这一问题，Vue 提出了 slot 分发内容
+
 ```html
     <div id="app">
         <component1>
@@ -176,12 +226,19 @@ Vue 组件默认是覆盖渲染
     <div id="app">
         <component1>
             <h1>Tom</h1>
+            <!--
+                如果在组件定义的 template 当中没有 <slot></slot>，那么下面两个 h1 标签将不会存在
+                换句话说就是 <slot></slot> = <h1>Sam</h1><h1>Lucy</h1>
+                <slot></slot>可以放到 <h1>Tom</h1> 上面进行位置调换
+            -->
             <h1>Sam</h1>
             <h1>Lucy</h1>
         </component1>
     </div>
 ```
+
 ### 具名 slot
+如果要将组件里面不同的子元素放到不同的地方，那就为子元素加上一个属性 slot="名称"，然后在组件定义的时候用名称对应位置 <slot name="名称"></slot>，其它没有 slot 属性的子元素将统一分发到 <slot></slot> 里面
 ```html
     <div id="app">
         <component1>
@@ -205,8 +262,10 @@ Vue 组件默认是覆盖渲染
 ```html
     <div id="app">
         <component1>
+            <!--<slot name="lucy"></slot> = <h1 slot="lucy">Lucy</h1>-->
             <h1>Lucy</h1>
             <h1>Tom</h1>
+            <!--其它没有 slot 属性的子元素将全部分发到 <slot></slot> 标签-->
             <h1>Sam</h1>
         </component1>
     </div>

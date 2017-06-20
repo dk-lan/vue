@@ -17,11 +17,11 @@
 - [样式绑定](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/StyleBinding)
 - [Vue 实例化时基本属性](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/VueBasicOptions)
 - [修饰符](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Modifiers)
-- 组件
-- 指令
+- [组件](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Component)
+- [指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax#指令)
+- 自定义指令
 - 动画和过度效果
 - 路由
-- 钩子函数
 - Vuex
 
 # 认识 Vue

@@ -1,4 +1,4 @@
-[登陆页效果预览](https://dk-lan.github.io/vue-erp/dist/index.html#/login)
+[登陆页效果预览](https://dk-lan.github.io/vue-erp/VueERP/dist/index.html#/login)
 
 # 项目文件结构
 - dist [构建目录]

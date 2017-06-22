@@ -19,7 +19,7 @@
 - [修饰符](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Modifiers)
 - [组件](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Component)
 - [指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax#指令)
-- 自定义指令
+- [自定义指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Directive)
 - 动画和过度效果
 - [路由](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Router)
 - Vuex

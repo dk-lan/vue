@@ -5,7 +5,7 @@ import $ from 'jquery'
 
 // import jsonp from 'superagent-jsonp';
 
-const LOCAL_SERVER = '/cloudapi/';
+const LOCAL_SERVER = 'http://localhost:81/cloudapi/';
 
 const DEV_SERVER = '';
 const PRO_SERVER = '';

@@ -7,15 +7,15 @@ const state = {
 
 const mutations = {
 	login: (data, formData) => {
-		if(formData.username == 'dk' && formData.password == 'dk'){
-			router.push({name: 'home'})
-		} else {
+		// if(formData.username == 'dk' && formData.password == 'dk'){
+		// 	router.push({name: 'home'})
+		// } else {
 			formData.grant_type = 'password'
 			http.post('login/index', formData)
 			.then(response => {
 				router.push({name: 'home'})
 			})
-		}
+		// }
 	}
 }
 

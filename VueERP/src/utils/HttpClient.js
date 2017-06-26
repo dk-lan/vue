@@ -14,7 +14,7 @@ function getUrl(path) {
     if (path.startsWith('http')) {
         return path;
     }
-    return `${LOCAL_SERVER}${path}`;
+    return `${PRO_SERVER}${path}`;
 }
 
 const errorHandler = (err) => {

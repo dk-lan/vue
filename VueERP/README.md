@@ -1,4 +1,13 @@
 [登陆页效果预览](https://dk-lan.github.io/vue-erp/VueERP/dist/index.html#/login)
+# 项目说明
+项目基于 bootstrap 样式打造，可能在样式上会有一些小兼容问题，在此暂时忽略，本项目以实现功能为主。
+脚手架的搭那是基于 Vue-cli，具体步骤如下：
+1. npm install -g vue-cli
+2. D: (跳转到项目目录)
+3. vue init webpack-simple vueproject (vueproject 为项目目录名称，可行更改)
+4. cd vueproject
+5. npm install
+6. npm run dev
 
 # 项目文件结构
 - dist [构建目录]

@@ -8,7 +8,7 @@ import $ from 'jquery'
 const LOCAL_SERVER = 'http://localhost:81/cloudapi/';
 
 const DEV_SERVER = '';
-const PRO_SERVER = '';
+const PRO_SERVER = 'http://www.dk-lan.com/cloudapi/';
 
 function getUrl(path) {
     if (path.startsWith('http')) {

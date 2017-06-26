@@ -18,17 +18,14 @@ import App from './App.vue'
 
 Vue.directive('datepicker', {
 	inserted: (element, binding, vnode) => {
-		console.log(vnode)
 		var _datepicker = $(element).datepicker({
 			language: 'zh-CN',
 			pickTime: false,
 			todayBtn: true,
 			autoclose: true
 		}).on('changeDate', (ev) => {
-			//dataform.birthday.a.b.cmc
 			var model = vnode.data.attrs['data-model'];
 			if(model){
-				//['dataform', 'birthday']
 				var models = model.split('.')
 				var context = vnode.context
 				models.map((ele, idx) => {

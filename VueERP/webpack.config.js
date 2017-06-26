@@ -30,7 +30,7 @@ module.exports = {
           use: [{
             loader: 'file-loader',
             options: {query: {
-                name:'assets/[name].[ext]'
+                name:'assets/[name].[hash:7].[ext]'
               }
             }
           },{
@@ -56,7 +56,7 @@ module.exports = {
       { 
           test: /\.(woff|svg|eot|ttf)\??.*$/,
           exclude: /node_modules/,
-          loader: 'url-loader?limit=50000&name=[path][name].[ext]'
+          loader: 'url-loader?limit=80000&name=fonts/[name].[md5.hash.hex:7].[ext]'
       },
       {
           test: /\.scss$/,

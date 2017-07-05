@@ -28,9 +28,9 @@ module.exports = {
       {
           test: /\.(jpe?g|png|gif|svg)$/i,
           use: [{
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {query: {
-                name:'assets/[name].[hash:7].[ext]'
+                name: path.join(__dirname, 'assets/[name].[hash:7].[ext]')
               }
             }
           },{

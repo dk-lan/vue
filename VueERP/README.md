@@ -1,4 +1,4 @@
-[登陆页效果预览](https://dk-lan.github.io/vue-erp/VueERP/dist/index.html#/login)
+[登陆页效果预览](http://www.dk-lan.com/web/vueerp/#/login)
 # 项目说明
 项目基于 bootstrap 样式打造，可能在样式上会有一些小兼容问题，在此暂时忽略，本项目以实现功能为主。
 脚手架的搭那是基于 Vue-cli，具体步骤如下：

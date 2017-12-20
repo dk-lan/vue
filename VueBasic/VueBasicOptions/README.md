@@ -183,7 +183,7 @@
 [事件效果预览](https://dk-lan.github.io/vue-erp/VueBasic/VueBasicOptions/methods.html)
 
 # 计算属性 computed
-computed 主要是针对对 data 的属性进行操作，this 的指针默认指向实例 vm
+computed 主要是针对 data 的属性进行操作，this 的指针默认指向实例 vm
 ``` html
     <p>{{reversedMessage}}</p>
 ```
@@ -303,7 +303,7 @@ Vue 提供了对单个属性的监听器，当该属性发生改变的时候，�
         },
         watch: {
             a: function (newVal, oldVal) {
-                //自动触发此该当
+                //自动触发此方法
                 console.log('new: %s, old: %s', newVal, oldVal)
             },
         }    
@@ -315,7 +315,7 @@ Vue 提供了对单个属性的监听器，当该属性发生改变的时候，�
         data: {
             a: 1,
             changeA: function (newVal, oldVal) {
-                //自动触发此该当
+                //自动触发此方法
                 console.log('new: %s, old: %s', newVal, oldVal)
             }
         },
@@ -325,9 +325,9 @@ Vue 提供了对单个属性的监听器，当该属性发生改变的时候，�
     }
 ```
 watch 与 compute 区别：
-1、computed 创建新的属性， watch 监听 data 已有的属性
-2、会产生依赖缓存
-3、当 watch 监听 computed 时，watch 在这种情况下无效，仅会触发 computed.setter
+1. computed 创建新的属性， watch 监听 data 已有的属性
+2. compute 会产生依赖缓存
+3. 当 watch 监听 computed 时，watch 在这种情况下无效，仅会触发 computed.setter
 ```javascript
     {
         computed: {

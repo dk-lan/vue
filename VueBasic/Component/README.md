@@ -132,6 +132,37 @@
     </div>
 ```
 
+## 动态组件 - :is
+```html
+<div id="app" style="display: none;">
+    <input type="button" value="changeLight" @click="changeLight" />
+    <br/>
+    <p :is="show"></p>
+</div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            show: 'red',
+        },
+        methods:{
+            changeLight: function(){
+                this.show = this.show == 'red' ? 'green' : 'red';
+            }
+        },
+        components: {
+            red: {
+                template: '<h1>Red</h1>'
+            },
+            green: {
+                template: '<h1>Green</h1>'
+            }
+        }
+    })
+</script>
+```
+
 ## 组件属性
 组件的属性要先声明后使用，props: ['属性名'...]
 ```html

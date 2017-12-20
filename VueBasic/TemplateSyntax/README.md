@@ -252,4 +252,4 @@ var vm = new Vue({
 
 [指令效果预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Directives.html)
 
-[综合安全预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Example.html)
+[综合案例预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Example.html)

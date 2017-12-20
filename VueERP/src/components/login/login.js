@@ -3,6 +3,8 @@ import http from '../../utils/HttpClient'
 import router from '../../router/index'
 
 const state = {
+	a: 1,
+	b: 2
 }
 
 const mutations = {
@@ -20,8 +22,8 @@ const mutations = {
 }
 
 const actions = {
-	login: (events, formData) => {
-		events.commit('login', formData)
+	login: (store, params) => {
+		store.commit('login', params)
 	}
 }
 

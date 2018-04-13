@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组件通信</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <fieldset>
+    	<legend><h3>父组件向子组件传参数 - props</h3></legend>
+    	<div id="app">
+            <p><label>父组件</label><input type="text" v-model="txt"/></p>
+            <child :txt="txt"></child>    
+    	</div>
+    </fieldset>
+
+    <script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            txt: ""
+        },
+        components: {
+            'child': {
+                props: ['txt'],
+                template: '<h1>子组件-{{this.txt}}</h1>'
+            }
+        }
+    })
+    </script>
+</body>
+</html>

@@ -18,6 +18,7 @@
 - [Vue 实例化时基本属性](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/VueBasicOptions)
 - [修饰符](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Modifiers)
 - [组件](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Component)
+- [组件通信](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Communication)
 - [指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax#指令)
 - [自定义指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Directive)
 - [动画和过度效果](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Transition)
@@ -89,5 +90,3 @@ V：View，视图，也就是 HTML
 VM：ViewModel，就是连接数据和视图的桥梁，当 Model 发生改变的时候，ViewModel 便将数据映射到视图。
 
 那么数据驱动模式和 MVVM 模式有什么关系，换句话说，MVVM 是数据驱动模式的一种实现，Vue 是 MVVM 的一种实现。
-
-

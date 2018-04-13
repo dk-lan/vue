@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组件通信</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <fieldset>
+    	<legend><h3>父组件向子组件传参数 - children</h3></legend>
+    	<div id="app">
+    		<p><label>父组件</label><input type="text" v-on:input="change"/></p>
+            <child></child>
+    	</div>
+    </fieldset>
+
+    <script type="text/javascript">
+    	var vm = new Vue({
+    		el: '#app',
+            methods: {
+                change: function(event){
+                    this.$children[0].childEvent(event.target.value);
+                }
+            },
+    		components: {
+    			'child': {
+                    template: '<h1>子组件-{{this.txt}}</h1>',
+                    data: function(){
+                        return {txt: ''};
+                    },
+                    methods: {
+                        childEvent: function(_txt){
+                            this.txt = _txt;
+                        }
+                    }
+    			}
+    		}
+    	})
+    </script>
+</body>
+</html>

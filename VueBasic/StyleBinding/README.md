@@ -103,3 +103,16 @@ v-bind:class="[]"，数组元素可以为表达式，也可以为字符串，如
 ``` html
     <div style="color: red, font-size: 12px; background-color: #ccc"></div>
 ```
+
+## css作用域——scoped
+```html
+<style scoped>
+    @media (min-width: 250px) {
+        .list-container:hover {
+            background: orange;
+        }
+    }
+</style>
+
+<style src="../css/index.css" scoped></style>
+```

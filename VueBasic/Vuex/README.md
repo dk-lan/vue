@@ -160,5 +160,70 @@ export default {
 
 Vuex 就是上面这种解决方案的更深层次的实现。
 
-## Vuex 使用
-### 三大核心之 Action
+## 跨组件通信之——Vuex
+#### store.js
+```javascript
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+let state = {
+    count: 0
+}
+
+let mutations = {
+    increment(){
+        state.count += 1;
+    },
+    decrement(){
+        state.count -= 1;
+    }
+}
+
+const store = new Vuex.Store({
+    state,
+    mutations
+})
+
+export default store
+```
+
+#### app.js
+```javascript
+import Vue from 'vue'
+import store from './vuex/store'
+
+import homeComponent from './components/home/home.vue'
+
+new Vue({
+    el: '#app',
+    store,
+    render:h => h(homeComponent)
+})
+```
+
+#### homecomponent
+
+```html
+<input type="button" value="increment" @click="increment"/>
+<span>{{$store.state.count}}</span>
+<script type="text/javascript">
+    methods: {
+        increment(){
+            this.$store.commit('increment');
+        }
+    }    
+</script>
+```
+
+#### countercomponent
+```html
+<span>{{$store.state.count}}</span>
+```
+
+#### 小结
+- Vuex 实例 store，添加到 Vue 实例化当中去，然后整个 Vue 实例都能通过 $store 获取到公共对象 store。
+- 用 `this.$store.commit('increment');` 触发 mutations 的 increment 方法
+- state 是通过 mutations 来改变
+- 用`$store.state.count`获取 store 的 state。

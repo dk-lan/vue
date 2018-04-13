@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="../../../../libs/vue/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<fieldset>
+			<legend><h3>ASCII = 13 时触发</h3></legend>
+			<p></p>
+			<input @keyup.13="submit">	
+		</fieldset>
+		<fieldset>
+			<legend><h3>按回车键时触发</h3></legend>
+			<p></p>
+			<input @keyup.enter="submit">
+		</fieldset>	
+		<fieldset>
+			<legend><h3>Vue.config.keyCodes.number1 = 49</h3></legend>
+			<input @keyup.number1="submit" />		
+		</fieldset>	
+		<fieldset>
+			<legend>原生 js 监听 keycode</legend>
+			<p id="keycode"></p>
+			<input id="input" />
+		</fieldset>
+	</div>
+	
+
+	
+
+	<script type="text/javascript">
+		window.onload = function(){
+			document.getElementById('input').onkeydown = function(event){
+				console.log(event.keyCode)
+				document.getElementById('keycode').innerText = event.which
+			}			
+		}
+
+
+		Vue.config.keyCodes.number1 = 49;
+		Vue.config.keyCodes.f2 = 113;
+
+		Vue.config.keyCodes.a = 13;
+
+		var vm = new Vue({
+			el: '#app',
+			data:{
+				counter: 0,
+				attr: 0
+			},
+			methods: {
+				submit: function(event){
+					console.log(event);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

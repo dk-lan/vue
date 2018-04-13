@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="../../../../libs/vue/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<!-- 在 "change" 而不是 "input" 事件中更新 -->
+		<input v-model.lazy="counter">	
+
+		<input v-model="counter" >
+		<!-- 自动将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值） -->
+		<input v-model.number="counter" type="number">			
+		<!-- 自动过滤用户输入的首尾空格 -->
+		<input v-model.trim="counter">	
+	</div>
+	
+	<input type="text" id="input">
+
+	<script type="text/javascript">
+		// document.getElementById('input').onchange = function(){
+		// 	console.log(2222);
+		// }
+		// document.getElementById('input').onblur = function(){
+		// 	console.log(1111);
+		// }		
+
+		var vm = new Vue({
+			el: '#app',
+			data:{
+				counter: 0,
+				age: 0
+			}
+		})
+	</script>
+</body>
+</html>

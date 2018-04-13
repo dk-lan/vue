@@ -18,4 +18,34 @@
 ```
 [事件修饰符效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Modifiers/eventModifiers.html)
 
+#按键修饰符
+```html
+<div id="app">
+    <fieldset>
+        <legend><h3>ASCII = 13 时触发</h3></legend>
+        <p></p>
+        <input @keyup.13="submit">  
+    </fieldset>
+    <fieldset>
+        <legend><h3>按回车键时触发</h3></legend>
+        <p></p>
+        <input @keyup.enter="submit">
+    </fieldset> 
+    <fieldset>
+        <legend><h3>自定义按键 Vue.config.keyCodes.number1 = 49</h3></legend>
+        <input @keyup.number1="submit" />       
+    </fieldset> 
+</div>
+```
+[按键修饰符效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Modifiers/keypress.html)
+
 # 表单修饰符
+```html
+        <!-- 在 "change" 而不是 "input" 事件中更新 -->
+        <input v-model.lazy="counter">  
+        <!-- 自动将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值） -->
+        <input v-model.number="counter" type="number">          
+        <!-- 自动过滤用户输入的首尾空格 -->
+        <input v-model.trim="counter">  
+```
+[表单修饰符效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Modifiers/form.html)

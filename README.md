@@ -22,7 +22,8 @@
 - [指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax#指令)
 - [自定义指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Directive)
 - [动画和过度效果](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Transition)
-- [路由](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Router)
+- [路由](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuecli)
+- [vue-cli]
 - Vuex
   - [Vuex 介绍和简单实现](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex)
   - [state](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex/state)

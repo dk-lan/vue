@@ -2,21 +2,30 @@
 
 目前只实现了简单的登录和客户档案的添加和显示功能，后面会进一步更新功能。
 
-登录
-
 用户名：dk 
-
 密码：123
 
 # 项目说明
 项目基于 bootstrap 样式打造，可能在样式上会有一些小兼容问题，在此暂时忽略，本项目以实现功能为主。
-脚手架的搭那是基于 Vue-cli，具体步骤如下：
-1. npm install -g vue-cli
-2. D: (跳转到项目目录)
-3. vue init webpack-simple vueproject (vueproject 为项目目录名称，可行更改)
-4. cd vueproject
-5. npm install
-6. npm run dev
+
+项目适合从零搭建后台管理系统的项目，且项目配置了 jquery，不要问为什么，主要是兼容不同的人群，目前有很多刚接触数据驱动的技术人员还不能完全脱离 jquery，但又要上项目，所以只是为了方便更多的人用。
+
+案例的脚手架是基于 Vue-cli，完全可以在这个基础上去添加需要的功能，后续会抽时间继续完善。
+
+案例支持
+- sass
+- iconfont
+- token
+- bootstrap
+- jquery
+- jquery vertify
+- vuex
+
+由于案例是方便大家，暂时放到本人的服务器中运行，没有做任何安全防护，技术的世界，一直坚信是美好的，所以各位在添加数据时手下留情。
+
+# 运行
+1. `npm install`
+2. `npm run dev`
 
 # 项目文件结构
 - dist [构建目录]
@@ -28,7 +37,7 @@
   - utils [ajax]
   - vuex [store]
 
-  # 后台管理系统的常规技术点
+# 后台管理系统的常规技术点
 - 数据请求 ajax
   - 所有 ajax 请求都会有 loding 和遮罩层
   - 所有的 ajax 的 url 都应该设置相对应的前缀方便发布

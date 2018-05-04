@@ -198,7 +198,7 @@
 ```html
     <div id="app">
         <p>{{total}}</p>
-        <incrementTotal v-on:count="incrementTotal"></incrementTotal>
+        <increment-total v-on:count="incrementTotal"></increment-total>
     </div>
 ```
 ```javascript

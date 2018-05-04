@@ -102,7 +102,7 @@
         <button>0</button>
     </div>    
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Component/component.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Component/component.html)
 
 ## 特殊的 HTML 结构中使用 is
 比如在下拉列表（select）元素里面，子元素必须为 option，则在使用组件的时候用 is

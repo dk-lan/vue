@@ -46,7 +46,7 @@ SPA 中组件的切换有一种生硬的隐藏显示感觉，为了更好的用�
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Transition/01-CSS过渡.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Transition/01-CSS过渡.html)
 
 ## CSS 动画
 使用到组件 `transition` 的属性: `name`。
@@ -88,7 +88,7 @@ SPA 中组件的切换有一种生硬的隐藏显示感觉，为了更好的用�
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Transition/02-CSS动画.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Transition/02-CSS动画.html)
 
 ## 初始渲染的过渡
 第一次加载时的过渡效果，使用到组件 `transition` 的属性: `appear` `appear-class` `appear-active-class`。
@@ -110,7 +110,7 @@ SPA 中组件的切换有一种生硬的隐藏显示感觉，为了更好的用�
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Transition/03-初始渲染的过渡.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Transition/03-初始渲染的过渡.html)
 
 ## 多个元素的过渡效果
 同时生效的进入和离开的过渡不能满足所有要求，所以 Vue 提供了 过渡模式：
@@ -162,7 +162,7 @@ SPA 中组件的切换有一种生硬的隐藏显示感觉，为了更好的用�
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Transition/04-多个元素过渡.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Transition/04-多个元素过渡.html)
 
 ## 列表(v-for)的过渡效果
 v-for 生成列表过渡效果要使用组件 `transition-group`，组件提供属性 `tag` 表示该组件将会渲染成对应的 DOM 节点，其它的使用和 `transition` 一样。
@@ -207,7 +207,7 @@ v-for 生成列表过渡效果要使用组件 `transition-group`，组件提供�
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Transition/06-列表的进入和离开过渡.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Transition/06-列表的进入和离开过渡.html)
 
 ## 自定义过渡的类名
 我们可以通过以下特性来自定义过渡类名：
@@ -237,7 +237,7 @@ v-for 生成列表过渡效果要使用组件 `transition-group`，组件提供�
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Transition/07-自定义过渡的类名.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Transition/07-自定义过渡的类名.html)
 
 ## 过渡效果钩子函数
 除了用CSS过渡的动画来实现vue的组件过渡，还可以用JavaScript的钩子函数来实现，在钩子函数中直接操作DOM。我们可以在属性中声明以下钩子：

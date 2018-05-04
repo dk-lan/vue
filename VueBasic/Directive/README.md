@@ -46,7 +46,7 @@
         }
     })
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Directive/directive.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Directive/directive.html)
 
 ## 钩子函数
 钩子函数可以理解成是指令的生命周期
@@ -91,7 +91,7 @@
         }
     })
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Directive/hook.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Directive/hook.html)
 
 ## 案例：自定义日期控件
 这里用 boostrap 的 datepicker 插件实现
@@ -179,4 +179,4 @@
         }
     })
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Directive/datepicker.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Directive/datepicker.html)

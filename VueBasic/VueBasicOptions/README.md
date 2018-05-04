@@ -180,7 +180,7 @@
         }
     })
 ```
-[事件效果预览](https://dk-lan.github.io/vue-erp/VueBasic/VueBasicOptions/methods.html)
+[事件效果预览](https://dk-lan.github.io/vue/VueBasic/VueBasicOptions/methods.html)
 
 # 计算属性 computed
 computed 主要是针对 data 的属性进行操作，this 的指针默认指向实例 vm
@@ -288,7 +288,7 @@ Vue 在 getter 上面作了基于对应属性的依赖缓存，也就是说多�
         }
     })
 ```
-[计算属性效果预览](https://dk-lan.github.io/vue-erp/VueBasic/VueBasicOptions/computed.html)
+[计算属性效果预览](https://dk-lan.github.io/vue/VueBasic/VueBasicOptions/computed.html)
 # 监听器 watch
 Vue 提供了对单个属性的监听器，当该属性发生改变的时候，自动触发，此项使用不当会影响性能，所以慎用。
 ```html
@@ -349,4 +349,4 @@ watch 与 compute 区别：
         }    
     }
 ```
-[监听器效果预览](https://dk-lan.github.io/vue-erp/VueBasic/VueBasicOptions/watcher.html)
+[监听器效果预览](https://dk-lan.github.io/vue/VueBasic/VueBasicOptions/watcher.html)

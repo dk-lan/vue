@@ -27,7 +27,7 @@
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Communication/01-父组件向子组件传参数-props.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Communication/01-父组件向子组件传参数-props.html)
 
 ### 父组件调用子组件方法 - refs
 ```html
@@ -60,7 +60,7 @@
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Communication/02-父组件调用子组件方法-refs.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Communication/02-父组件调用子组件方法-refs.html)
 
 ### 父组件调用子组件方法 - children
 ```html
@@ -93,7 +93,7 @@
     })
 </script>
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Communication/03-父组件调用子组件方法-children.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Communication/03-父组件调用子组件方法-children.html)
 
 ## 子组件向父组件通信
 ### 子组件调用父组件的方法 - parent.emit
@@ -128,7 +128,7 @@
     })
 </script>        
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Communication/04-子组件调用父组件的方法-parent.emit.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Communication/04-子组件调用父组件的方法-parent.emit.html)
 
 ### 子组件调用父组件的方法 - emit
 父组件在调用子组件时用 `v-on` 把事件传给子组件，子组件用 `this.$emit` 调用父组件传过来的事件。
@@ -162,7 +162,7 @@
     })
 </script>    
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Communication/05-子组件调用父组件方法-emit.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Communication/05-子组件调用父组件方法-emit.html)
 
 ### 子组件调用父组件的方法 - parent
 父组件在调用子组件时用 `v-on` 把事件传给子组件，子组件用 `this.$emit` 调用父组件传过来的事件。
@@ -196,7 +196,7 @@
     })
 </script>    
 ```
-[效果预览](https://dk-lan.github.io/vue-erp/VueBasic/Communication/06-子组件调用父组件方法-parent.html)
+[效果预览](https://dk-lan.github.io/vue/VueBasic/Communication/06-子组件调用父组件方法-parent.html)
 
 ## 兄弟组件之间通信
 和上面介绍的父子之间通信是一样的，因为任何两个子组件之间，都会拥有一个共同的父级组件，所以兄弟组件之间的通信就是子1向父，然后再父向子2，这样来达到兄弟之间组件的通信。

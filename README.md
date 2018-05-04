@@ -13,24 +13,24 @@
 - 认识 Vue
 - 认识数据驱动模式
 - 认识 MVVM 模式
-- [模版语法](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax)
-- [样式绑定](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/StyleBinding)
-- [Vue 实例化时基本属性](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/VueBasicOptions)
-- [修饰符](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Modifiers)
-- [组件](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Component)
-- [组件通信](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Communication)
-- [指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/TemplateSyntax#指令)
-- [自定义指令](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Directive)
-- [动画和过度效果](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Transition)
-- [路由](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Router)
-- [vue-cli](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuecli)
+- [模版语法](https://github.com/dk-lan/vue/tree/master/VueBasic/TemplateSyntax)
+- [样式绑定](https://github.com/dk-lan/vue/tree/master/VueBasic/StyleBinding)
+- [Vue 实例化时基本属性](https://github.com/dk-lan/vue/tree/master/VueBasic/VueBasicOptions)
+- [修饰符](https://github.com/dk-lan/vue/tree/master/VueBasic/Modifiers)
+- [组件](https://github.com/dk-lan/vue/tree/master/VueBasic/Component)
+- [组件通信](https://github.com/dk-lan/vue/tree/master/VueBasic/Communication)
+- [指令](https://github.com/dk-lan/vue/tree/master/VueBasic/TemplateSyntax#指令)
+- [自定义指令](https://github.com/dk-lan/vue/tree/master/VueBasic/Directive)
+- [动画和过度效果](https://github.com/dk-lan/vue/tree/master/VueBasic/Transition)
+- [路由](https://github.com/dk-lan/vue/tree/master/VueBasic/Router)
+- [vue-cli](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuecli)
 - Vuex
-  - [Vuex 介绍和简单实现](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex)
-  - [state](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex/state)
-  - [mutation](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex/mutation)
-  - [getter](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex/getter)
-  - [action](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex/action)
-  - [module](https://github.com/dk-lan/vue-erp/tree/master/VueBasic/Vuex/module)
+  - [Vuex 介绍和简单实现](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuex)
+  - [state](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuex/state)
+  - [mutation](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuex/mutation)
+  - [getter](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuex/getter)
+  - [action](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuex/action)
+  - [module](https://github.com/dk-lan/vue/tree/master/VueBasic/Vuex/module)
 
 # 认识 Vue
 关于 Vue 的描述有不少，不外乎都会拿来与 Angular 和 React 对比，同样头顶 MVVM 双向数据驱动设计模式光环的 Angular 自然被对比的最多，但到目前为止，Angular 在热度上已明显不及 Vue，性能已成为最大的诟病。

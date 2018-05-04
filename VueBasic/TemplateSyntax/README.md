@@ -44,7 +44,7 @@ var vm = new Vue({
   }
 })
 ```
-[插值效果预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Interpolations.html)
+[插值效果预览](https://dk-lan.github.io/vue/VueBasic/TemplateSyntax/Interpolations.html)
 
 ## 缩写
 ### v-bind 缩写
@@ -250,6 +250,6 @@ var vm = new Vue({
   </tbody>
 </table>
 
-[指令效果预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Directives.html)
+[指令效果预览](https://dk-lan.github.io/vue/VueBasic/TemplateSyntax/Directives.html)
 
-[综合案例预览](https://dk-lan.github.io/vue-erp/VueBasic/TemplateSyntax/Example.html)
+[综合案例预览](https://dk-lan.github.io/vue/VueBasic/TemplateSyntax/Example.html)

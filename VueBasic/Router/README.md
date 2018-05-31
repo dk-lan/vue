@@ -129,7 +129,11 @@
             <!--编程式导航2：router.push()-->
             <input type="button" value="一楼" @click="router.push('/floor1')">
             <!--编程式导航3：router.push({})-->
-            <input type="button" value="一楼" @click="router.push({path: '/floor1'})">            
+            <input type="button" value="一楼" @click="router.push({path: '/floor1'})">      
+            <!--编程式导航4：router.push({}) 传参数 #/floor1/123-->
+            <input type="button" value="一楼" @click="router.push({path: '/floor1', params: {id: 123}})"> 
+            <!--编程式导航5：router.push({}) 传参数 #/floor1?id=123-->
+            <input type="button" value="一楼" @click="router.push({path: '/floor1', query: {id: 123}})">  
         </p>
         <router-view></router-view>
     </div>

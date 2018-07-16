@@ -5,6 +5,7 @@
 
 ## vue-cli 使用
 - 首先需要全局安装 vue `npm install vue-cli -g`
+- `npm install webpack -g`
 - `vue init webpack-simple my-project` my-project 是项目目录名称
 - `cd my-project`
 - `npm install`
